@@ -1,0 +1,339 @@
+
+===========================================================================
+report_checks -path_delay min (Hold)
+============================================================================
+Startpoint: NMI (input port clocked by clk)
+Endpoint: SRAMADDR_Sys0_S1[0] (output port clocked by clk)
+Path Group: clk
+Path Type: min
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.00    0.00    0.00   clock clk (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                          2.00    2.00 ^ input external delay
+                  0.09    0.06    2.06 ^ NMI (in)
+     5    0.02                           NMI (net)
+                  0.09    0.00    2.06 ^ _057240_/B (sky130_fd_sc_hd__and2_2)
+                  0.06    0.16    2.21 ^ _057240_/X (sky130_fd_sc_hd__and2_2)
+     3    0.01                           _010789_ (net)
+                  0.06    0.00    2.21 ^ _059923_/A2 (sky130_fd_sc_hd__o31a_2)
+                  0.05    0.14    2.35 ^ _059923_/X (sky130_fd_sc_hd__o31a_2)
+     2    0.01                           _013414_ (net)
+                  0.05    0.00    2.35 ^ _059925_/B1 (sky130_fd_sc_hd__a211o_2)
+                  0.02    0.08    2.43 ^ _059925_/X (sky130_fd_sc_hd__a211o_2)
+     1    0.00                           _013416_ (net)
+                  0.02    0.00    2.44 ^ _059926_/B (sky130_fd_sc_hd__and2_2)
+                  0.05    0.13    2.57 ^ _059926_/X (sky130_fd_sc_hd__and2_2)
+     2    0.01                           _013417_ (net)
+                  0.06    0.01    2.57 ^ _059927_/B1 (sky130_fd_sc_hd__a21oi_2)
+                  0.03    0.04    2.61 v _059927_/Y (sky130_fd_sc_hd__a21oi_2)
+     3    0.01                           _013418_ (net)
+                  0.04    0.01    2.62 v _059928_/A (sky130_fd_sc_hd__inv_2)
+                  0.02    0.03    2.65 ^ _059928_/Y (sky130_fd_sc_hd__inv_2)
+     1    0.00                           _013419_ (net)
+                  0.02    0.00    2.65 ^ _059929_/A0 (sky130_fd_sc_hd__mux2_2)
+                  0.05    0.13    2.78 ^ _059929_/X (sky130_fd_sc_hd__mux2_2)
+     2    0.00                           _013420_ (net)
+                  0.05    0.00    2.78 ^ _059930_/B1 (sky130_fd_sc_hd__a22o_2)
+                  0.07    0.14    2.93 ^ _059930_/X (sky130_fd_sc_hd__a22o_2)
+     4    0.01                           _013421_ (net)
+                  0.07    0.00    2.93 ^ _059931_/A (sky130_fd_sc_hd__buf_1)
+                  0.13    0.14    3.07 ^ _059931_/X (sky130_fd_sc_hd__buf_1)
+     5    0.01                           ahb_sys_0_uut.AHB.HADDR[2] (net)
+                  0.13    0.00    3.07 ^ _061204_/A1 (sky130_fd_sc_hd__mux2_2)
+                  0.04    0.15    3.22 ^ _061204_/X (sky130_fd_sc_hd__mux2_2)
+     1    0.00                           _014548_ (net)
+                  0.04    0.00    3.23 ^ _061205_/A (sky130_fd_sc_hd__buf_1)
+                  0.43    0.29    3.52 ^ _061205_/X (sky130_fd_sc_hd__buf_1)
+     1    0.03                           SRAMADDR_Sys0_S1[0] (net)
+                  0.43    0.00    3.52 ^ SRAMADDR_Sys0_S1[0] (out)
+                                  3.52   data arrival time
+
+                  0.00    0.00    0.00   clock clk (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                          0.25    0.25   clock uncertainty
+                          0.00    0.25   clock reconvergence pessimism
+                         -2.00   -1.75   output external delay
+                                 -1.75   data required time
+-----------------------------------------------------------------------------
+                                 -1.75   data required time
+                                 -3.52   data arrival time
+-----------------------------------------------------------------------------
+                                  5.27   slack (MET)
+
+
+Startpoint: NMI (input port clocked by clk)
+Endpoint: SRAMADDR_Sys0_S1[1] (output port clocked by clk)
+Path Group: clk
+Path Type: min
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.00    0.00    0.00   clock clk (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                          2.00    2.00 ^ input external delay
+                  0.09    0.06    2.06 ^ NMI (in)
+     5    0.02                           NMI (net)
+                  0.09    0.00    2.06 ^ _057261_/B (sky130_fd_sc_hd__nand2_2)
+                  0.04    0.06    2.12 v _057261_/Y (sky130_fd_sc_hd__nand2_2)
+     2    0.01                           _010809_ (net)
+                  0.04    0.00    2.12 v _059939_/A3 (sky130_fd_sc_hd__a41o_2)
+                  0.04    0.25    2.37 v _059939_/X (sky130_fd_sc_hd__a41o_2)
+     1    0.00                           _013429_ (net)
+                  0.04    0.01    2.38 v _059940_/A (sky130_fd_sc_hd__inv_2)
+                  0.02    0.04    2.41 ^ _059940_/Y (sky130_fd_sc_hd__inv_2)
+     1    0.00                           _013430_ (net)
+                  0.03    0.00    2.42 ^ _059945_/B1 (sky130_fd_sc_hd__a311o_2)
+                  0.04    0.09    2.51 ^ _059945_/X (sky130_fd_sc_hd__a311o_2)
+     2    0.01                           _013435_ (net)
+                  0.04    0.00    2.52 ^ _059946_/B2 (sky130_fd_sc_hd__o22a_2)
+                  0.03    0.10    2.62 ^ _059946_/X (sky130_fd_sc_hd__o22a_2)
+     1    0.00                           _013436_ (net)
+                  0.03    0.00    2.62 ^ _059947_/C (sky130_fd_sc_hd__and3_2)
+                  0.04    0.15    2.77 ^ _059947_/X (sky130_fd_sc_hd__and3_2)
+     1    0.00                           _013437_ (net)
+                  0.04    0.00    2.78 ^ _059949_/A2 (sky130_fd_sc_hd__o31a_2)
+                  0.06    0.14    2.92 ^ _059949_/X (sky130_fd_sc_hd__o31a_2)
+     3    0.01                           _013439_ (net)
+                  0.06    0.00    2.92 ^ _059950_/B1 (sky130_fd_sc_hd__a21o_2)
+                  0.10    0.13    3.05 ^ _059950_/X (sky130_fd_sc_hd__a21o_2)
+     4    0.02                           _013440_ (net)
+                  0.10    0.00    3.05 ^ _059951_/A0 (sky130_fd_sc_hd__mux2_2)
+                  0.05    0.15    3.20 ^ _059951_/X (sky130_fd_sc_hd__mux2_2)
+     2    0.00                           _013441_ (net)
+                  0.05    0.00    3.21 ^ _059952_/B1 (sky130_fd_sc_hd__a22o_2)
+                  0.07    0.14    3.35 ^ _059952_/X (sky130_fd_sc_hd__a22o_2)
+     4    0.01                           _013442_ (net)
+                  0.07    0.00    3.35 ^ _059953_/A (sky130_fd_sc_hd__buf_1)
+                  0.13    0.14    3.49 ^ _059953_/X (sky130_fd_sc_hd__buf_1)
+     5    0.01                           ahb_sys_0_uut.AHB.HADDR[3] (net)
+                  0.13    0.00    3.49 ^ _061206_/A1 (sky130_fd_sc_hd__mux2_2)
+                  0.04    0.15    3.65 ^ _061206_/X (sky130_fd_sc_hd__mux2_2)
+     1    0.00                           _014549_ (net)
+                  0.04    0.00    3.65 ^ _061207_/A (sky130_fd_sc_hd__buf_1)
+                  0.43    0.29    3.94 ^ _061207_/X (sky130_fd_sc_hd__buf_1)
+     1    0.03                           SRAMADDR_Sys0_S1[1] (net)
+                  0.43    0.00    3.94 ^ SRAMADDR_Sys0_S1[1] (out)
+                                  3.94   data arrival time
+
+                  0.00    0.00    0.00   clock clk (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                          0.25    0.25   clock uncertainty
+                          0.00    0.25   clock reconvergence pessimism
+                         -2.00   -1.75   output external delay
+                                 -1.75   data required time
+-----------------------------------------------------------------------------
+                                 -1.75   data required time
+                                 -3.94   data arrival time
+-----------------------------------------------------------------------------
+                                  5.69   slack (MET)
+
+
+Startpoint: NMI (input port clocked by clk)
+Endpoint: SRAMADDR_Sys0_S1[2] (output port clocked by clk)
+Path Group: clk
+Path Type: min
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.00    0.00    0.00   clock clk (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                          2.00    2.00 ^ input external delay
+                  0.09    0.06    2.06 ^ NMI (in)
+     5    0.02                           NMI (net)
+                  0.09    0.00    2.06 ^ _057261_/B (sky130_fd_sc_hd__nand2_2)
+                  0.04    0.06    2.12 v _057261_/Y (sky130_fd_sc_hd__nand2_2)
+     2    0.01                           _010809_ (net)
+                  0.04    0.01    2.12 v _057267_/A1 (sky130_fd_sc_hd__a21oi_2)
+                  0.10    0.12    2.24 ^ _057267_/Y (sky130_fd_sc_hd__a21oi_2)
+     2    0.01                           _010815_ (net)
+                  0.10    0.00    2.25 ^ _057268_/C1 (sky130_fd_sc_hd__a221o_2)
+                  0.03    0.11    2.35 ^ _057268_/X (sky130_fd_sc_hd__a221o_2)
+     1    0.00                           _010816_ (net)
+                  0.03    0.00    2.36 ^ _057269_/A2 (sky130_fd_sc_hd__o21a_2)
+                  0.07    0.12    2.48 ^ _057269_/X (sky130_fd_sc_hd__o21a_2)
+     3    0.01                           _010817_ (net)
+                  0.07    0.01    2.48 ^ _057270_/B1 (sky130_fd_sc_hd__a21oi_2)
+                  0.03    0.03    2.52 v _057270_/Y (sky130_fd_sc_hd__a21oi_2)
+     1    0.00                           _010818_ (net)
+                  0.03    0.01    2.53 v _057271_/A (sky130_fd_sc_hd__inv_2)
+                  0.05    0.05    2.58 ^ _057271_/Y (sky130_fd_sc_hd__inv_2)
+     3    0.01                           _010819_ (net)
+                  0.05    0.00    2.58 ^ _057272_/A0 (sky130_fd_sc_hd__mux2_2)
+                  0.05    0.14    2.72 ^ _057272_/X (sky130_fd_sc_hd__mux2_2)
+     2    0.01                           _010820_ (net)
+                  0.06    0.01    2.73 ^ _057273_/B1 (sky130_fd_sc_hd__a22oi_2)
+                  0.08    0.08    2.80 v _057273_/Y (sky130_fd_sc_hd__a22oi_2)
+     4    0.02                           _010821_ (net)
+                  0.08    0.01    2.81 v _057274_/A (sky130_fd_sc_hd__inv_2)
+                  0.08    0.09    2.90 ^ _057274_/Y (sky130_fd_sc_hd__inv_2)
+     4    0.02                           _010822_ (net)
+                  0.08    0.00    2.90 ^ _057275_/A (sky130_fd_sc_hd__buf_1)
+                  0.25    0.22    3.12 ^ _057275_/X (sky130_fd_sc_hd__buf_1)
+     5    0.02                           _010823_ (net)
+                  0.25    0.00    3.13 ^ _057276_/A (sky130_fd_sc_hd__buf_1)
+                  0.18    0.20    3.33 ^ _057276_/X (sky130_fd_sc_hd__buf_1)
+     5    0.01                           _010824_ (net)
+                  0.18    0.00    3.33 ^ _057277_/A (sky130_fd_sc_hd__buf_1)
+                  0.13    0.16    3.49 ^ _057277_/X (sky130_fd_sc_hd__buf_1)
+     5    0.01                           ahb_sys_0_uut.AHB.HADDR[4] (net)
+                  0.13    0.00    3.50 ^ _061208_/A1 (sky130_fd_sc_hd__mux2_2)
+                  0.04    0.15    3.65 ^ _061208_/X (sky130_fd_sc_hd__mux2_2)
+     1    0.00                           _014550_ (net)
+                  0.04    0.00    3.65 ^ _061209_/A (sky130_fd_sc_hd__buf_1)
+                  0.43    0.29    3.94 ^ _061209_/X (sky130_fd_sc_hd__buf_1)
+     1    0.03                           SRAMADDR_Sys0_S1[2] (net)
+                  0.43    0.00    3.95 ^ SRAMADDR_Sys0_S1[2] (out)
+                                  3.95   data arrival time
+
+                  0.00    0.00    0.00   clock clk (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                          0.25    0.25   clock uncertainty
+                          0.00    0.25   clock reconvergence pessimism
+                         -2.00   -1.75   output external delay
+                                 -1.75   data required time
+-----------------------------------------------------------------------------
+                                 -1.75   data required time
+                                 -3.95   data arrival time
+-----------------------------------------------------------------------------
+                                  5.70   slack (MET)
+
+
+Startpoint: EXT_IRQ (input port clocked by clk)
+Endpoint: SRAMADDR_Sys0_S1[3] (output port clocked by clk)
+Path Group: clk
+Path Type: min
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.00    0.00    0.00   clock clk (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                          2.00    2.00 ^ input external delay
+                  0.04    0.02    2.02 ^ EXT_IRQ (in)
+     3    0.01                           EXT_IRQ (net)
+                  0.04    0.00    2.02 ^ _057264_/A (sky130_fd_sc_hd__and3_2)
+                  0.06    0.16    2.18 ^ _057264_/X (sky130_fd_sc_hd__and3_2)
+     2    0.01                           _010812_ (net)
+                  0.06    0.00    2.18 ^ _057280_/A3 (sky130_fd_sc_hd__o31a_2)
+                  0.04    0.12    2.30 ^ _057280_/X (sky130_fd_sc_hd__o31a_2)
+     2    0.00                           _010827_ (net)
+                  0.04    0.00    2.30 ^ _057281_/C1 (sky130_fd_sc_hd__a221o_2)
+                  0.03    0.09    2.39 ^ _057281_/X (sky130_fd_sc_hd__a221o_2)
+     1    0.00                           _010828_ (net)
+                  0.03    0.00    2.39 ^ _057282_/B1 (sky130_fd_sc_hd__a21o_2)
+                  0.02    0.07    2.46 ^ _057282_/X (sky130_fd_sc_hd__a21o_2)
+     1    0.00                           _010829_ (net)
+                  0.02    0.00    2.46 ^ _057283_/B (sky130_fd_sc_hd__and2_2)
+                  0.07    0.14    2.61 ^ _057283_/X (sky130_fd_sc_hd__and2_2)
+     3    0.01                           _010830_ (net)
+                  0.07    0.00    2.61 ^ _057284_/B1 (sky130_fd_sc_hd__a21o_2)
+                  0.10    0.13    2.74 ^ _057284_/X (sky130_fd_sc_hd__a21o_2)
+     4    0.02                           _010831_ (net)
+                  0.10    0.00    2.74 ^ _057285_/A0 (sky130_fd_sc_hd__mux2_2)
+                  0.05    0.16    2.90 ^ _057285_/X (sky130_fd_sc_hd__mux2_2)
+     2    0.01                           _010832_ (net)
+                  0.06    0.01    2.91 ^ _057286_/B1 (sky130_fd_sc_hd__a22oi_2)
+                  0.08    0.07    2.98 v _057286_/Y (sky130_fd_sc_hd__a22oi_2)
+     4    0.02                           _010833_ (net)
+                  0.08    0.01    2.99 v _057287_/A (sky130_fd_sc_hd__inv_2)
+                  0.11    0.11    3.10 ^ _057287_/Y (sky130_fd_sc_hd__inv_2)
+     5    0.02                           _010834_ (net)
+                  0.11    0.00    3.10 ^ _057288_/A (sky130_fd_sc_hd__buf_1)
+                  0.18    0.18    3.28 ^ _057288_/X (sky130_fd_sc_hd__buf_1)
+     5    0.01                           _010835_ (net)
+                  0.18    0.00    3.28 ^ _057289_/A (sky130_fd_sc_hd__buf_1)
+                  0.14    0.17    3.45 ^ _057289_/X (sky130_fd_sc_hd__buf_1)
+     5    0.01                           _010836_ (net)
+                  0.14    0.00    3.45 ^ _057290_/A (sky130_fd_sc_hd__buf_1)
+                  0.13    0.16    3.61 ^ _057290_/X (sky130_fd_sc_hd__buf_1)
+     5    0.01                           ahb_sys_0_uut.AHB.HADDR[5] (net)
+                  0.13    0.00    3.61 ^ _061211_/A1 (sky130_fd_sc_hd__mux2_2)
+                  0.04    0.15    3.77 ^ _061211_/X (sky130_fd_sc_hd__mux2_2)
+     1    0.00                           _014552_ (net)
+                  0.04    0.00    3.77 ^ _061212_/A (sky130_fd_sc_hd__buf_1)
+                  0.43    0.29    4.06 ^ _061212_/X (sky130_fd_sc_hd__buf_1)
+     1    0.03                           SRAMADDR_Sys0_S1[3] (net)
+                  0.43    0.00    4.06 ^ SRAMADDR_Sys0_S1[3] (out)
+                                  4.06   data arrival time
+
+                  0.00    0.00    0.00   clock clk (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                          0.25    0.25   clock uncertainty
+                          0.00    0.25   clock reconvergence pessimism
+                         -2.00   -1.75   output external delay
+                                 -1.75   data required time
+-----------------------------------------------------------------------------
+                                 -1.75   data required time
+                                 -4.06   data arrival time
+-----------------------------------------------------------------------------
+                                  5.81   slack (MET)
+
+
+Startpoint: NMI (input port clocked by clk)
+Endpoint: SRAMADDR_Sys0_S1[7] (output port clocked by clk)
+Path Group: clk
+Path Type: min
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.00    0.00    0.00   clock clk (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                          2.00    2.00 v input external delay
+                  0.04    0.03    2.03 v NMI (in)
+     5    0.02                           NMI (net)
+                  0.04    0.00    2.03 v _057032_/B1 (sky130_fd_sc_hd__a21oi_2)
+                  0.11    0.11    2.14 ^ _057032_/Y (sky130_fd_sc_hd__a21oi_2)
+     2    0.01                           _010582_ (net)
+                  0.11    0.01    2.14 ^ _057033_/C (sky130_fd_sc_hd__nor3_2)
+                  0.05    0.06    2.21 v _057033_/Y (sky130_fd_sc_hd__nor3_2)
+     4    0.01                           _010583_ (net)
+                  0.05    0.00    2.21 v _057036_/A (sky130_fd_sc_hd__and2_2)
+                  0.06    0.19    2.40 v _057036_/X (sky130_fd_sc_hd__and2_2)
+     5    0.02                           _010586_ (net)
+                  0.06    0.01    2.41 v _057037_/B (sky130_fd_sc_hd__nor2_2)
+                  0.13    0.12    2.53 ^ _057037_/Y (sky130_fd_sc_hd__nor2_2)
+     4    0.01                           _010587_ (net)
+                  0.13    0.00    2.53 ^ _057199_/B1 (sky130_fd_sc_hd__o311a_2)
+                  0.11    0.23    2.77 ^ _057199_/X (sky130_fd_sc_hd__o311a_2)
+     5    0.02                           _010749_ (net)
+                  0.11    0.00    2.77 ^ _057200_/A (sky130_fd_sc_hd__buf_1)
+                  0.22    0.20    2.97 ^ _057200_/X (sky130_fd_sc_hd__buf_1)
+     5    0.02                           _010750_ (net)
+                  0.22    0.00    2.98 ^ _057201_/A (sky130_fd_sc_hd__buf_1)
+                  0.22    0.22    3.20 ^ _057201_/X (sky130_fd_sc_hd__buf_1)
+     5    0.02                           _010751_ (net)
+                  0.22    0.00    3.20 ^ _059790_/A2 (sky130_fd_sc_hd__a21o_2)
+                  0.05    0.17    3.38 ^ _059790_/X (sky130_fd_sc_hd__a21o_2)
+     3    0.01                           _013297_ (net)
+                  0.05    0.00    3.38 ^ _059791_/A0 (sky130_fd_sc_hd__mux2_2)
+                  0.05    0.14    3.52 ^ _059791_/X (sky130_fd_sc_hd__mux2_2)
+     2    0.00                           _013298_ (net)
+                  0.05    0.00    3.52 ^ _059792_/B1 (sky130_fd_sc_hd__a22o_2)
+                  0.13    0.18    3.70 ^ _059792_/X (sky130_fd_sc_hd__a22o_2)
+     5    0.02                           _013299_ (net)
+                  0.13    0.00    3.71 ^ _059793_/A (sky130_fd_sc_hd__buf_1)
+                  0.13    0.16    3.86 ^ _059793_/X (sky130_fd_sc_hd__buf_1)
+     5    0.01                           ahb_sys_0_uut.AHB.HADDR[9] (net)
+                  0.13    0.00    3.87 ^ _061219_/A1 (sky130_fd_sc_hd__mux2_2)
+                  0.04    0.15    4.02 ^ _061219_/X (sky130_fd_sc_hd__mux2_2)
+     1    0.00                           _014556_ (net)
+                  0.04    0.00    4.02 ^ _061220_/A (sky130_fd_sc_hd__buf_1)
+                  0.43    0.29    4.31 ^ _061220_/X (sky130_fd_sc_hd__buf_1)
+     1    0.03                           SRAMADDR_Sys0_S1[7] (net)
+                  0.43    0.00    4.32 ^ SRAMADDR_Sys0_S1[7] (out)
+                                  4.32   data arrival time
+
+                  0.00    0.00    0.00   clock clk (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                          0.25    0.25   clock uncertainty
+                          0.00    0.25   clock reconvergence pessimism
+                         -2.00   -1.75   output external delay
+                                 -1.75   data required time
+-----------------------------------------------------------------------------
+                                 -1.75   data required time
+                                 -4.32   data arrival time
+-----------------------------------------------------------------------------
+                                  6.07   slack (MET)
+
+

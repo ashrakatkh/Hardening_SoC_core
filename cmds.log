@@ -1,0 +1,90 @@
+Thu Apr 28 12:53:35 UTC 2022 - Executing "/openlane/scripts/mergeLef.py -o /openlane/designs/soc_core/runs/RUN_2022.04.28_12.53.35/tmp/merged.unpadded.nom.lef -i /home/adming3/OpenLane/pdks/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd__nom.tlef /home/adming3/OpenLane/pdks/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_fd_sc_hd.lef |& tee /dev/null"
+
+Thu Apr 28 12:53:35 UTC 2022 - Executing "/openlane/scripts/mergeLef.py -o /openlane/designs/soc_core/runs/RUN_2022.04.28_12.53.35/tmp/merged.unpadded.min.lef -i /home/adming3/OpenLane/pdks/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd__min.tlef /home/adming3/OpenLane/pdks/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_fd_sc_hd.lef |& tee /dev/null"
+
+Thu Apr 28 12:53:35 UTC 2022 - Executing "/openlane/scripts/mergeLef.py -o /openlane/designs/soc_core/runs/RUN_2022.04.28_12.53.35/tmp/merged.unpadded.max.lef -i /home/adming3/OpenLane/pdks/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd__max.tlef /home/adming3/OpenLane/pdks/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_fd_sc_hd.lef |& tee /dev/null"
+
+Thu Apr 28 12:53:35 UTC 2022 - Executing "openroad -python /openlane/scripts/mergeLib.py --output /openlane/designs/soc_core/runs/RUN_2022.04.28_12.53.35/tmp/synthesis/merged.lib --name sky130A_merged /home/adming3/OpenLane/pdks/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib"
+
+Thu Apr 28 12:53:36 UTC 2022 - Executing "openroad -python /openlane/scripts/libtrim.py --cell-file /openlane/designs/soc_core/runs/RUN_2022.04.28_12.53.35/tmp/synthesis/trimmed.lib.exclude.list --output /openlane/designs/soc_core/runs/RUN_2022.04.28_12.53.35/tmp/synthesis/trimmed.lib /openlane/designs/soc_core/runs/RUN_2022.04.28_12.53.35/tmp/synthesis/merged.lib"
+
+Thu Apr 28 12:53:36 UTC 2022 - Executing "echo {openlane 85b6ceca9e38a2187226457ad398f8da3353e8e5} > /openlane/designs/soc_core/runs/RUN_2022.04.28_12.53.35/OPENLANE_VERSION"
+
+Thu Apr 28 12:53:36 UTC 2022 - Executing "openroad -python /openlane/scripts/new_tracks.py -i /home/adming3/OpenLane/pdks/sky130A/libs.tech/openlane/sky130_fd_sc_hd/tracks.info -o /openlane/designs/soc_core/runs/RUN_2022.04.28_12.53.35/tmp/routing/config.tracks"
+
+Thu Apr 28 12:53:36 UTC 2022 - Executing "sed -E {s/^([[:space:]]+)pg_pin(.*)/\1pin\2\n\1    direction : "inout";/g} /home/adming3/OpenLane/pdks/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib > /openlane/designs/soc_core/runs/RUN_2022.04.28_12.53.35/tmp/synthesis/1-sky130_fd_sc_hd__tt_025C_1v80.no_pg.lib"
+
+Thu Apr 28 12:53:36 UTC 2022 - Executing "yosys -c /openlane/scripts/yosys/synth.tcl -l /openlane/designs/soc_core/runs/RUN_2022.04.28_12.53.35/logs/synthesis/1-synthesis.log |& tee /dev/null"
+
+Thu Apr 28 13:38:46 UTC 2022 - Executing "sed -i -e {s/\(set ::env(CURRENT_NETLIST)\).*/\1 \/openlane\/designs\/soc_core\/runs\/RUN_2022.04.28_12.53.35\/results\/synthesis\/soc_core.v/} /openlane/designs/soc_core/runs/RUN_2022.04.28_12.53.35/config.tcl"
+
+Thu Apr 28 13:38:46 UTC 2022 - Executing "sed -i -e {s/\(set ::env(PREV_NETLIST)\).*/\1 0/} /openlane/designs/soc_core/runs/RUN_2022.04.28_12.53.35/config.tcl"
+
+Thu Apr 28 13:38:46 UTC 2022 - Executing "sed -i /defparam/d /openlane/designs/soc_core/runs/RUN_2022.04.28_12.53.35/results/synthesis/soc_core.v"
+
+Thu Apr 28 13:38:47 UTC 2022 - Executing "openroad -exit /openlane/scripts/openroad/sta.tcl"
+
+Thu Apr 28 13:38:58 UTC 2022 - Executing "openroad -exit /openlane/scripts/openroad/floorplan.tcl"
+
+Thu Apr 28 13:39:00 UTC 2022 - Executing "openroad -python /openlane/scripts/defutil.py extract_core_dims --output-data /openlane/designs/soc_core/runs/RUN_2022.04.28_12.53.35/tmp/dimensions.txt --input-lef /openlane/designs/soc_core/runs/RUN_2022.04.28_12.53.35/tmp/merged.nom.lef /openlane/designs/soc_core/runs/RUN_2022.04.28_12.53.35/tmp/floorplan/3-initial_fp.def"
+
+Thu Apr 28 13:39:00 UTC 2022 - Executing "openroad -python /openlane/scripts/io_place.py --input-lef /openlane/designs/soc_core/runs/RUN_2022.04.28_12.53.35/tmp/merged.nom.lef --config /openlane/designs/soc_core/pin_order.cfg --hor-layer met3 --ver-layer met2 --ver-width-mult 2 --hor-width-mult 2 --hor-extension -1 --ver-extension -1 --length 4 -o /openlane/designs/soc_core/runs/RUN_2022.04.28_12.53.35/tmp/floorplan/4-io.def /openlane/designs/soc_core/runs/RUN_2022.04.28_12.53.35/tmp/floorplan/3-initial_fp.def |& tee /openlane/designs/soc_core/runs/RUN_2022.04.28_12.53.35/logs/floorplan/4-place_io_ol.log /dev/null"
+
+Thu Apr 28 13:39:01 UTC 2022 - Executing "openroad -exit /openlane/scripts/openroad/tapcell.tcl"
+
+Thu Apr 28 13:39:03 UTC 2022 - Executing "openroad -exit /openlane/scripts/openroad/pdn.tcl"
+
+Thu Apr 28 13:39:11 UTC 2022 - Executing "openroad -exit /openlane/scripts/openroad/replace.tcl"
+
+Thu Apr 28 13:39:58 UTC 2022 - Executing "openroad -exit /openlane/scripts/openroad/resizer.tcl"
+
+Thu Apr 28 13:40:47 UTC 2022 - Executing "openroad -exit /openlane/scripts/openroad/write_verilog.tcl"
+
+Thu Apr 28 13:40:48 UTC 2022 - Executing "sed -i -e {s/\(set ::env(CURRENT_NETLIST)\).*/\1 \/openlane\/designs\/soc_core\/runs\/RUN_2022.04.28_12.53.35\/results\/placement\/soc_core.resized.v/} /openlane/designs/soc_core/runs/RUN_2022.04.28_12.53.35/config.tcl"
+
+Thu Apr 28 13:40:48 UTC 2022 - Executing "sed -i -e {s/\(set ::env(PREV_NETLIST)\).*/\1 \/openlane\/designs\/soc_core\/runs\/RUN_2022.04.28_12.53.35\/results\/synthesis\/soc_core.v/} /openlane/designs/soc_core/runs/RUN_2022.04.28_12.53.35/config.tcl"
+
+Thu Apr 28 13:40:48 UTC 2022 - Executing "openroad -exit /openlane/scripts/openroad/opendp.tcl"
+
+Thu Apr 28 13:40:50 UTC 2022 - Executing "openroad -python /openlane/scripts/libtrim.py --cell-file /openlane/designs/soc_core/runs/RUN_2022.04.28_12.53.35/tmp/cts/cts.lib.exclude.list --output /openlane/designs/soc_core/runs/RUN_2022.04.28_12.53.35/tmp/cts/cts.lib /home/adming3/OpenLane/pdks/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib"
+
+Thu Apr 28 13:40:50 UTC 2022 - Executing "openroad -exit /openlane/scripts/openroad/cts.tcl"
+
+Thu Apr 28 13:41:49 UTC 2022 - Executing "openroad -exit /openlane/scripts/openroad/write_verilog.tcl"
+
+Thu Apr 28 13:41:50 UTC 2022 - Executing "sed -i -e {s/\(set ::env(CURRENT_NETLIST)\).*/\1 \/openlane\/designs\/soc_core\/runs\/RUN_2022.04.28_12.53.35\/results\/cts\/soc_core.v/} /openlane/designs/soc_core/runs/RUN_2022.04.28_12.53.35/config.tcl"
+
+Thu Apr 28 13:41:50 UTC 2022 - Executing "sed -i -e {s/\(set ::env(PREV_NETLIST)\).*/\1 \/openlane\/designs\/soc_core\/runs\/RUN_2022.04.28_12.53.35\/results\/placement\/soc_core.resized.v/} /openlane/designs/soc_core/runs/RUN_2022.04.28_12.53.35/config.tcl"
+
+Thu Apr 28 13:41:50 UTC 2022 - Executing "openroad -exit /openlane/scripts/openroad/resizer_timing.tcl"
+
+Thu Apr 28 13:42:21 UTC 2022 - Executing "openroad -exit /openlane/scripts/openroad/write_verilog.tcl"
+
+Thu Apr 28 13:42:22 UTC 2022 - Executing "sed -i -e {s/\(set ::env(CURRENT_NETLIST)\).*/\1 \/openlane\/designs\/soc_core\/runs\/RUN_2022.04.28_12.53.35\/results\/cts\/soc_core.resized.v/} /openlane/designs/soc_core/runs/RUN_2022.04.28_12.53.35/config.tcl"
+
+Thu Apr 28 13:42:22 UTC 2022 - Executing "sed -i -e {s/\(set ::env(PREV_NETLIST)\).*/\1 \/openlane\/designs\/soc_core\/runs\/RUN_2022.04.28_12.53.35\/results\/cts\/soc_core.v/} /openlane/designs/soc_core/runs/RUN_2022.04.28_12.53.35/config.tcl"
+
+Thu Apr 28 13:42:22 UTC 2022 - Executing "openroad -exit /openlane/scripts/openroad/resizer_routing_timing.tcl"
+
+Thu Apr 28 13:43:04 UTC 2022 - Executing "openroad -exit /openlane/scripts/openroad/write_verilog.tcl"
+
+Thu Apr 28 13:43:05 UTC 2022 - Executing "sed -i -e {s/\(set ::env(CURRENT_NETLIST)\).*/\1 \/openlane\/designs\/soc_core\/runs\/RUN_2022.04.28_12.53.35\/results\/routing\/soc_core.resized.v/} /openlane/designs/soc_core/runs/RUN_2022.04.28_12.53.35/config.tcl"
+
+Thu Apr 28 13:43:05 UTC 2022 - Executing "sed -i -e {s/\(set ::env(PREV_NETLIST)\).*/\1 \/openlane\/designs\/soc_core\/runs\/RUN_2022.04.28_12.53.35\/results\/cts\/soc_core.resized.v/} /openlane/designs/soc_core/runs/RUN_2022.04.28_12.53.35/config.tcl"
+
+Thu Apr 28 13:43:05 UTC 2022 - Executing "openroad -exit /openlane/scripts/openroad/opendp.tcl"
+
+Thu Apr 28 13:43:07 UTC 2022 - Executing "openroad -exit /openlane/scripts/openroad/groute.tcl"
+
+Thu Apr 28 13:43:57 UTC 2022 - Executing "openroad -exit /openlane/scripts/openroad/fill.tcl"
+
+Thu Apr 28 13:44:00 UTC 2022 - Executing "openroad -exit /openlane/scripts/openroad/write_verilog.tcl"
+
+Thu Apr 28 13:44:01 UTC 2022 - Executing "sed -i -e {s/\(set ::env(CURRENT_NETLIST)\).*/\1 \/openlane\/designs\/soc_core\/runs\/RUN_2022.04.28_12.53.35\/tmp\/routing\/19-global.v/} /openlane/designs/soc_core/runs/RUN_2022.04.28_12.53.35/config.tcl"
+
+Thu Apr 28 13:44:01 UTC 2022 - Executing "sed -i -e {s/\(set ::env(PREV_NETLIST)\).*/\1 \/openlane\/designs\/soc_core\/runs\/RUN_2022.04.28_12.53.35\/results\/routing\/soc_core.resized.v/} /openlane/designs/soc_core/runs/RUN_2022.04.28_12.53.35/config.tcl"
+
+Thu Apr 28 13:44:01 UTC 2022 - Executing "openroad -exit /openlane/scripts/openroad/droute.tcl"
+
+Fri Apr 29 13:36:14 UTC 2022 - Executing "openroad -python /openlane/scripts/generate_reports.py -d /openlane/designs/soc_core --design_name soc_core --tag RUN_2022.04.28_12.53.35 --output_file /openlane/designs/soc_core/runs/RUN_2022.04.28_12.53.35/reports/metrics.csv --man_report /openlane/designs/soc_core/runs/RUN_2022.04.28_12.53.35/reports/manufacturability.rpt --run_path /openlane/designs/soc_core/runs/RUN_2022.04.28_12.53.35"
+
